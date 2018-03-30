@@ -1,0 +1,20 @@
+[0;1;32m●[0m openvpn@server.service - OpenVPN connection to server
+   Loaded: loaded (/lib/systemd/system/openvpn@.service; enabled; vendor preset: enabled)
+   Active: [0;1;32mactive (running)[0m since Fri 2018-03-30 07:30:55 UTC; 18min ago
+     Docs: man:openvpn(8)
+           https://community.openvpn.net/openvpn/wiki/Openvpn23ManPage
+           https://community.openvpn.net/openvpn/wiki/HOWTO
+ Main PID: 4095 (openvpn)
+   CGroup: /system.slice/system-openvpn.slice/openvpn@server.service
+           └─4095 /usr/sbin/openvpn --daemon ovpn-server --status /run/openvpn/server.status 10 --cd /etc/openvpn --script-security 2 --config /etc/openvpn/server.conf --writepid /run/openvpn/server.pid
+
+Mar 30 07:45:54 raposon-ubuntu-sgp1-01 ovpn-server[4095]: [0;1;31mTLS Error: cannot locate HMAC in incoming packet from [AF_INET]210.213.231.249:62380[0m
+Mar 30 07:47:48 raposon-ubuntu-sgp1-01 ovpn-server[4095]: [0;1;39m210.213.231.249:62424 TLS: Initial packet from [AF_INET]210.213.231.249:62424, sid=0d429623 d6a26c85[0m
+Mar 30 07:48:16 raposon-ubuntu-sgp1-01 ovpn-server[4095]: [0;1;39m210.213.231.249:62436 TLS: Initial packet from [AF_INET]210.213.231.249:62436, sid=046646b6 49c02d03[0m
+Mar 30 07:48:48 raposon-ubuntu-sgp1-01 ovpn-server[4095]: [0;1;31m210.213.231.249:62424 TLS Error: TLS key negotiation failed to occur within 60 seconds (check your network connectivity)[0m
+Mar 30 07:48:48 raposon-ubuntu-sgp1-01 ovpn-server[4095]: [0;1;31m210.213.231.249:62424 TLS Error: TLS handshake failed[0m
+Mar 30 07:48:48 raposon-ubuntu-sgp1-01 ovpn-server[4095]: [0;1;39m210.213.231.249:62424 SIGUSR1[soft,tls-error] received, client-instance restarting[0m
+Mar 30 07:48:53 raposon-ubuntu-sgp1-01 systemd[1]: Started OpenVPN connection to server.
+Mar 30 07:49:16 raposon-ubuntu-sgp1-01 ovpn-server[4095]: [0;1;31m210.213.231.249:62436 TLS Error: TLS key negotiation failed to occur within 60 seconds (check your network connectivity)[0m
+Mar 30 07:49:16 raposon-ubuntu-sgp1-01 ovpn-server[4095]: [0;1;31m210.213.231.249:62436 TLS Error: TLS handshake failed[0m
+Mar 30 07:49:16 raposon-ubuntu-sgp1-01 ovpn-server[4095]: [0;1;39m210.213.231.249:62436 SIGUSR1[soft,tls-error] received, client-instance restarting[0m
